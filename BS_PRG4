@@ -1,0 +1,41 @@
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    steps = 0
+
+    while low <= high:
+        steps += 1
+
+        mid = (low + high) // 2
+
+        if arr[mid] == target:
+            return mid, steps
+
+        elif arr[mid] < target:
+            low = mid + 1
+
+        else:
+            high = mid - 1
+
+    return -1, steps
+
+
+arr = []
+
+n = int(input("Enter the number of employees: "))
+
+for i in range(n):
+    em = int(input("Enter employee ID: "))
+    arr.append(em)
+
+arr.sort()
+
+target = int(input("Enter the target employee ID: "))
+
+result, steps = binary_search(arr, target)
+
+if result != -1:
+    print(f"Employee found at index {result}")
+    print(f"Number of steps = {steps}")
+else:
+    print("Employee not found")
+    print(f"Number of steps = {steps}")
