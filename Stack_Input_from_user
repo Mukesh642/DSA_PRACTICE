@@ -1,0 +1,14 @@
+stack= []
+n = int(input("Enter the number of Books: "))
+
+for i in range(n):
+    em = input("Enter Name of Book: ")
+    stack.append(em)
+top_element = stack[-1]
+print("Top element of the stack:", top_element)
+last_index = len(stack) - 1
+print("Index of Last Element:", last_index)
+if len(stack)==0:
+    print("Stack is empty")
+else:
+    print("Stack is not empty")
