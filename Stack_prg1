@@ -1,0 +1,8 @@
+stack = ["Plate1", "Plate2", "Plate3"]
+new_plate = "Plate4"
+stack.append(new_plate)
+removed_plate = stack.pop()
+last_index = len(stack) - 1
+print("Removed Plate:", removed_plate)
+print("Index of Last Element:", last_index," ",stack[last_index])
+print("Final Stack:", stack)
